@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="favicon.ico">
+    <title>Custom E-Commerce Sites - 786 Solution</title>
+    <meta name="description"
+        content="Scalable & Secure Online Stores engineered for maximum conversions, high performance, and seamless management.">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/ionicons/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <link rel="stylesheet" href="plugins/slider/slider.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom CSS strictly for this details page -->
+    <style>
+        /* WhatsApp Floating Button Hover Effect */
+        .whatsapp-float:hover {
+            background-color: #128c7e !important;
+            color: #fff !important;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Product Details Section Styles */
+        .product-details-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .product-image-wrapper {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-info-wrapper h2 {
+            font-size: 32px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .product-info-wrapper .subtitle-lead {
+            font-size: 18px;
+            color: #02bdd5;
+            /* Brand Cyan */
+            font-weight: 500;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .product-info-wrapper>p {
+            color: #666;
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+
+        /* Detailed Features Layout */
+        .detailed-feature-list {
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #02bdd5;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: #f1f1f1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            font-size: 30px;
+            color: #02bdd5;
+            margin-right: 20px;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .feature-content h4 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .feature-content p {
+            margin: 0;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Action Buttons */
+        .btn-demo-solid {
+            background: #02bdd5;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-demo-solid i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .btn-demo-solid:hover {
+            background: #00A6BB;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(2, 189, 213, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="top-bar" class="navbar-fixed-top animated-header">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="786 Solution"
+                            style="max-width: 200px; max-height: 50px; width: auto; height: auto; mix-blend-mode: multiply;">
+                    </a>
+                </div>
+            </div>
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <div class="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span
+                                    class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="blog-fullwidth.html">Blog Full</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Global Page Header -->
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2>Custom E-Commerce Sites</h2>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">
+                                    <i class="ion-ios-home"></i> Home
+                                </a>
+                            </li>
+                            <li><span class="active">/ Products / Custom E-Commerce</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column: Visuals (Sticky on desktop) -->
+                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-duration="500ms">
+                    <div class="product-image-wrapper">
+                        <!-- High Quality E-Commerce Platform Showcase Image -->
+                        <img src="images/portfolio/item-3.avif"
+                            alt="Custom E-Commerce Solutions" class="img-responsive">
+                    </div>
+                </div>
+
+                <!-- Right Column: Details & Features -->
+                <div class="col-md-7 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="product-info-wrapper">
+                        <h2>Scalable & Secure Online Stores</h2>
+                        <p class="subtitle-lead">
+                            🛍️ Tailor-Made E-Commerce Platforms Engineered to Scale Your Brand and Drive Revenue
+                        </p>
+                        <p>
+                            Break free from slow, generic templates. 786 Solution builds custom e-commerce web
+                            applications designed explicitly for your brand's unique goals. From mobile-optimized
+                            shopping experiences to complex multi-vendor marketplaces, our stores offer lightning-fast
+                            page loads, rock-solid security, and effortless management.
+                        </p>
+
+                        <!-- Detailed Feature Checklist -->
+                        <div class="detailed-feature-list">
+
+                            <!-- Feature 1 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-monitor-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Custom UI/UX & Brand Design</h4>
+                                    <p>Stand out from competitors with bespoke storefront designs crafted for your brand
+                                        identity. We engineer intuitive navigation, mobile-first responsiveness, and
+                                        smooth checkout journeys that turn casual visitors into loyal customers.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-card"></i></div>
+                                <div class="feature-content">
+                                    <h4>Multi-Gateway Payment Processing</h4>
+                                    <p>Offer customers flexible payment methods. Integrate seamlessly with local and
+                                        international gateways including Credit/Debit Cards, Stripe, PayPal, JazzCash,
+                                        EasyPaisa, and Cash on Delivery (COD) with real-time verification.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-box-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Real-Time Inventory & Stock Sync</h4>
+                                    <p>Never sell out-of-stock items again. Track inventory levels automatically across
+                                        multiple variants (size, color, material) and receive automated low-stock
+                                        notifications for timely replenishment.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-paperplane-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Centralized Order Management</h4>
+                                    <p>Manage the entire fulfillment lifecycle from a single dashboard. Print custom
+                                        invoices and shipping labels, update order statuses, and trigger automated SMS
+                                        and email notifications to keep shoppers informed.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 5 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-search"></i></div>
+                                <div class="feature-content">
+                                    <h4>Advanced Search & Faceted Filtering</h4>
+                                    <p>Help buyers find exactly what they want in seconds. Empower your store with
+                                        instant search indexing, category filters, price sliders, and attribute sorting
+                                        to drastically reduce bounce rates.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 6 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-pulse-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Speed Optimization & Technical SEO</h4>
+                                    <p>Achieve higher rank on search engines with clean code architecture, structured
+                                        schema markup, fast loading speeds, optimized image pipelines, and dynamic XML
+                                        sitemaps built directly into the core platform.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 7 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-locked-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Enterprise Security & Automated Backups</h4>
+                                    <p>Protect your store and customer data. We implement SSL encryption, PCI-DSS
+                                        compliance standards, brute-force defense mechanisms, secure admin access, and
+                                        daily automated database backups.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 8 -->
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-analytics-outline"></i></div>
+                                <div class="feature-content">
+                                    <h4>Comprehensive Sales & Revenue Analytics</h4>
+                                    <p>Make data-driven business decisions. Access real-time analytics reports covering
+                                        total revenue, top-selling products, customer acquisition channels, cart
+                                        abandonment metrics, and average order values.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p><strong>Transform your online business with a high-performing e-commerce store built to grow
+                                with you.</strong></p>
+
+                        <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20discuss%20a%20Custom%20E-Commerce%20Website!"
+                            target="_blank" class="btn-demo-solid mt-3">
+                            <i class="ion-social-whatsapp"></i> Get a Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">READY TO LAUNCH
+                            YOUR ONLINE STORE?</h2>
+                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                            Whether you are launching a new online store or upgrading an existing brand, 786 Solution
+                            delivers tailor-made e-commerce platforms designed for growth.<br>Contact our engineering
+                            team today to discuss your vision.
+                        </p>
+                        <a href="https://wa.me/923245541969" target="_blank"
+                            class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
+                            data-wow-duration="500ms">Contact Us Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <div class="col-md-8">
+                <p class="copyright">Copyright: <span>
+                        <script>document.write(new Date().getFullYear())</script>
+                    </span> Designed and Developed by <a href="#">786 Solution</a>. <br>
+                    Empowering Businesses with Custom Software, AI & E-Commerce Solutions.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <ul class="social">
+                    <li><a href="#" class="Facebook"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#" class="Twitter"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#" class="instagram"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="ion-social-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20know%20more%20about%20your%20Custom%20E-Commerce%20services!"
+        target="_blank" class="whatsapp-float" style="position: fixed; 
+          width: 60px; 
+          height: 60px; 
+          bottom: 40px; 
+          right: 40px; 
+          background-color: #25d366; 
+          color: #FFF; 
+          border-radius: 50px; 
+          text-align: center; 
+          font-size: 30px; 
+          box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
+          z-index: 1000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;">
+        <i class="ion-social-whatsapp"></i>
+    </a>
+
+    <!-- Template Javascript Files -->
+    <script src="plugins/jQurey/jquery.min.js"></script>
+    <script src="plugins/form-validation/jquery.form.js"></script>
+    <script src="plugins/form-validation/jquery.validate.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/wow-js/wow.min.js"></script>
+    <script src="plugins/slider/slider.js"></script>
+    <script src="plugins/facncybox/jquery.fancybox.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
