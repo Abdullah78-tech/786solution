@@ -214,116 +214,154 @@
     Team Section Start
 ================================================== -->
     <section id="team">
+        <style>
+            /* Standardize all profile pictures */
+            #team .team-pic {
+                width: 250px !important;
+                height: 250px !important;
+                object-fit: cover !important;
+                object-position: top center;
+                border-radius: 8px;
+            }
+
+            /* Force the row to act as a flex container so columns match height */
+            .meet-the-team-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            /* Make columns stretch to fill the height of the tallest card in the row */
+            .meet-the-team-row>.col-md-3 {
+                display: flex;
+                margin-bottom: 30px;
+            }
+
+            /* Flex column layout inside the card */
+            #team .team-member {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+            }
+
+            #team .team-img {
+                text-align: center;
+                margin: 0 auto 15px auto;
+            }
+
+            /* Push the social icon div to the absolute bottom of the container */
+            #team .social-icons {
+                margin-top: auto !important;
+                margin-bottom: 0;
+            }
+        </style>
+
         <div class="container">
-            <div class="row">
-                <h2 class="subtitle text-center" style="margin-bottom: 40px;">Executive Leadership</h2>
+            <h2 class="subtitle text-center" style="margin-bottom: 40px;">Executive Leadership</h2>
 
-                <!-- Row 1: Saad (Text Left, Image Right) -->
-                <!-- Row 1: Saad (Text Left, Image Right) -->
-                <div class="row ceo-row"
-                    style="margin-bottom: 50px; display: flex; align-items: center; flex-wrap: wrap;">
-                    <div class="col-md-8 col-sm-7 ceo-text-col wow fadeInLeft" data-wow-duration="500ms"
-                        data-wow-delay=".3s">
-                        <div class="ceo-details" style="padding: 15px;">
-                            <h3 class="team_name"
-                                style="font-size: 26px; font-weight: 700; color: #333; margin-top: 0;">Saad Ullah
-                                Mubarak</h3>
-                            <p class="team_designation"
-                                style="font-size: 16px; font-weight: 600; color: #02bdb6; margin-bottom: 5px;">
-                                CTO & CEO | Founder of 786Solution
-                            </p>
-                            <p class="team_meta"
-                                style="font-size: 13px; font-style: italic; color: #888; margin-bottom: 15px;">
-                                786Solution
-                                <a href="https://www.linkedin.com/in/saad-mubarak-61640a220/" style="margin-left: 15px;"
-                                    target="_blank"><i class="fa-brands fa-square-linkedin fa-xl"></i></a>
-                            </p>
-                            <p class="team_text"
-                                style="font-size: 15px; line-height: 1.8; color: #666; margin-bottom: 15px;">
-                                With over a decade of continuous experience at 786Solution, evolving from a Software
-                                Developer to a Project Manager and Team Lead. Specialized in engineering robust .NET
-                                desktop applications, ERP solutions, and comprehensive management systems across diverse
-                                domains including schools, distribution setups, leasing firms, and processing factories.
-                            </p>
-                            <ul
-                                style="font-size: 14px; line-height: 1.8; color: #666; padding-left: 20px; margin-bottom: 15px;">
-                                <li style="margin-bottom: 8px;">Lead software architecture, requirements analysis, and
-                                    end-to-end project management for complex enterprise systems.</li>
-                                <li style="margin-bottom: 8px;">Leverage deep technical expertise in C#, .NET Framework,
-                                    SQL Server, PostgreSQL, and Odoo (Functional & Technical).</li>
-                                <li style="margin-bottom: 8px;">Guide cross-functional teams to deliver scalable
-                                    accounting and management applications tailored to specific business needs.</li>
-                                <li style="margin-bottom: 8px;">Currently expanding service offerings into Amazon FBA,
-                                    providing comprehensive Product Research, Sourcing, Listing, Keyword SEO, and
-                                    Campaign Management.</li>
-                            </ul>
-                        </div>
+            <!-- Row 1: Saad (Text Left, Image Right) -->
+            <div class="row ceo-row" style="margin-bottom: 50px; display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="col-md-8 col-sm-7 ceo-text-col wow fadeInLeft" data-wow-duration="500ms"
+                    data-wow-delay=".3s">
+                    <div class="ceo-details" style="padding: 15px;">
+                        <h3 class="team_name" style="font-size: 26px; font-weight: 700; color: #333; margin-top: 0;">
+                            Saad Ullah
+                            Mubarak</h3>
+                        <p class="team_designation"
+                            style="font-size: 16px; font-weight: 600; color: #02bdb6; margin-bottom: 5px;">
+                            CTO & CEO | Founder of 786Solution
+                        </p>
+                        <p class="team_meta"
+                            style="font-size: 13px; font-style: italic; color: #888; margin-bottom: 15px;">
+                            786Solution
+                            <a href="https://www.linkedin.com/in/saad-mubarak-61640a220/" style="margin-left: 15px;"
+                                target="_blank"><i class="fa-brands fa-square-linkedin fa-xl"></i></a>
+                        </p>
+                        <p class="team_text"
+                            style="font-size: 15px; line-height: 1.8; color: #666; margin-bottom: 15px;">
+                            With over a decade of continuous experience at 786Solution, evolving from a Software
+                            Developer to a Project Manager and Team Lead. Specialized in engineering robust .NET
+                            desktop applications, ERP solutions, and comprehensive management systems across diverse
+                            domains including schools, distribution setups, leasing firms, and processing factories.
+                        </p>
+                        <ul
+                            style="font-size: 14px; line-height: 1.8; color: #666; padding-left: 20px; margin-bottom: 15px;">
+                            <li style="margin-bottom: 8px;">Lead software architecture, requirements analysis, and
+                                end-to-end project management for complex enterprise systems.</li>
+                            <li style="margin-bottom: 8px;">Leverage deep technical expertise in C#, .NET Framework,
+                                SQL Server, PostgreSQL, and Odoo (Functional & Technical).</li>
+                            <li style="margin-bottom: 8px;">Guide cross-functional teams to deliver scalable
+                                accounting and management applications tailored to specific business needs.</li>
+                            <li style="margin-bottom: 8px;">Currently expanding service offerings into Amazon FBA,
+                                providing comprehensive Product Research, Sourcing, Listing, Keyword SEO, and
+                                Campaign Management.</li>
+                        </ul>
                     </div>
-                    <div class="col-md-4 col-sm-5 text-center ceo-img-col wow fadeInRight" data-wow-duration="500ms"
-                        data-wow-delay=".3s">
-                        <div class="team-member" style="margin-bottom: 0;">
-                            <div class="team-img" style="max-width: 250px; margin: 0 auto;">
-                                <img src="images/team/saad.png" class="team-pic" alt="Saad - CEO">
-                            </div>
+                </div>
+                <div class="col-md-4 col-sm-5 text-center ceo-img-col wow fadeInRight" data-wow-duration="500ms"
+                    data-wow-delay=".3s">
+                    <div class="team-member" style="margin-bottom: 0;">
+                        <div class="team-img" style="max-width: 250px; margin: 0 auto;">
+                            <img src="images/team/saad.png" class="team-pic" alt="Saad - CEO">
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Row 2: Abu Bakkar (Image Left, Text Right) -->
-                <div class="row ceo-row"
-                    style="margin-bottom: 60px; display: flex; align-items: center; flex-wrap: wrap;">
-                    <div class="col-md-4 col-sm-5 text-center ceo-img-col wow fadeInLeft" data-wow-duration="500ms"
-                        data-wow-delay=".5s">
-                        <div class="team-member" style="margin-bottom: 0;">
-                            <div class="team-img" style="max-width: 250px; margin: 0 auto;">
-                                <img src="images/team/abubakar.jpeg" class="team-pic" alt="Abu Bakkar - CEO">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-7 ceo-text-col wow fadeInRight" data-wow-duration="500ms"
-                        data-wow-delay=".5s">
-                        <div class="ceo-details" style="padding: 15px;">
-                            <h3 class="team_name"
-                                style="font-size: 26px; font-weight: 700; color: #333; margin-top: 0;">Muhammad Abu
-                                Bakkar</h3>
-                            <p class="team_designation"
-                                style="font-size: 16px; font-weight: 600; color: #02bdb6; margin-bottom: 5px;">
-                                Principal AI Consultant and Team Lead
-                            </p>
-                            <p class="team_meta"
-                                style="font-size: 13px; font-style: italic; color: #888; margin-bottom: 15px;">
-                                786Solution
-                                <a href="https://www.linkedin.com/in/muhammad-abu-bakkar-bhatti/"
-                                    style="margin-left: 15px;" target="_blank"><i
-                                        class="fa-brands fa-square-linkedin fa-xl"></i></a>
-                            </p>
-                            <p class="team_text"
-                                style="font-size: 15px; line-height: 1.8; color: #666; margin-bottom: 15px;">
-                                Brought on to help large firms and enterprise clients move from AI ambition to AI
-                                execution, advising on strategy, architecture, and adoption paths for practical,
-                                production-ready AI systems. Leading a 7-person team delivering AI/ML solutions across
-                                client engagements, from initial consulting and solution design through to
-                                implementation.
-                            </p>
-                            <ul
-                                style="font-size: 14px; line-height: 1.8; color: #666; padding-left: 20px; margin-bottom: 15px;">
-                                <li style="margin-bottom: 8px;">Advise enterprise clients on AI adoption strategy,
-                                    use-case prioritization, and technical feasibility.</li>
-                                <li style="margin-bottom: 8px;">Design and oversee delivery of production AI/ML
-                                    solutions including LLM-based systems, RAG pipelines, and agentic workflows.</li>
-                                <li style="margin-bottom: 8px;">Lead a 7-person engineering team across concurrent
-                                    client projects, managing scope, technical direction, and delivery quality.</li>
-                                <li style="margin-bottom: 8px;">Act as the primary technical advisor bridging client
-                                    business goals with practical AI implementation.</li>
-                            </ul>
+            <!-- Row 2: Abu Bakkar (Image Left, Text Right) -->
+            <div class="row ceo-row" style="margin-bottom: 60px; display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="col-md-4 col-sm-5 text-center ceo-img-col wow fadeInLeft" data-wow-duration="500ms"
+                    data-wow-delay=".5s">
+                    <div class="team-member" style="margin-bottom: 0;">
+                        <div class="team-img" style="max-width: 250px; margin: 0 auto;">
+                            <img src="images/team/abubakar.jpeg" class="team-pic" alt="Abu Bakkar - CEO">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-8 col-sm-7 ceo-text-col wow fadeInRight" data-wow-duration="500ms"
+                    data-wow-delay=".5s">
+                    <div class="ceo-details" style="padding: 15px;">
+                        <h3 class="team_name" style="font-size: 26px; font-weight: 700; color: #333; margin-top: 0;">
+                            Muhammad Abu
+                            Bakkar</h3>
+                        <p class="team_designation"
+                            style="font-size: 16px; font-weight: 600; color: #02bdb6; margin-bottom: 5px;">
+                            Principal AI Consultant and Team Lead
+                        </p>
+                        <p class="team_meta"
+                            style="font-size: 13px; font-style: italic; color: #888; margin-bottom: 15px;">
+                            786Solution
+                            <a href="https://www.linkedin.com/in/muhammad-abu-bakkar-bhatti/" style="margin-left: 15px;"
+                                target="_blank"><i class="fa-brands fa-square-linkedin fa-xl"></i></a>
+                        </p>
+                        <p class="team_text"
+                            style="font-size: 15px; line-height: 1.8; color: #666; margin-bottom: 15px;">
+                            Brought on to help large firms and enterprise clients move from AI ambition to AI
+                            execution, advising on strategy, architecture, and adoption paths for practical,
+                            production-ready AI systems. Leading a 7-person team delivering AI/ML solutions across
+                            client engagements, from initial consulting and solution design through to
+                            implementation.
+                        </p>
+                        <ul
+                            style="font-size: 14px; line-height: 1.8; color: #666; padding-left: 20px; margin-bottom: 15px;">
+                            <li style="margin-bottom: 8px;">Advise enterprise clients on AI adoption strategy,
+                                use-case prioritization, and technical feasibility.</li>
+                            <li style="margin-bottom: 8px;">Design and oversee delivery of production AI/ML
+                                solutions including LLM-based systems, RAG pipelines, and agentic workflows.</li>
+                            <li style="margin-bottom: 8px;">Lead a 7-person engineering team across concurrent
+                                client projects, managing scope, technical direction, and delivery quality.</li>
+                            <li style="margin-bottom: 8px;">Act as the primary technical advisor bridging client
+                                business goals with practical AI implementation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                <hr style="border-top: 1px solid #e5e5e5; margin-bottom: 50px;">
+            <hr style="border-top: 1px solid #e5e5e5; margin-bottom: 50px;">
+            <h2 class="subtitle text-center" style="margin-bottom: 40px;">Meet The Team</h2>
 
-                <!-- Standard Team Members Grid -->
-                <h2 class="subtitle text-center" style="margin-bottom: 40px;">Meet The Team</h2>
+            <!-- Wrap all Meet The Team col-md-3 blocks inside this specific flex row -->
+            <div class="row meet-the-team-row">
 
                 <div class="col-md-3">
                     <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
@@ -359,6 +397,22 @@
                 </div>
 
                 <div class="col-md-3">
+                    <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                        <div class="team-img">
+                            <img src="images/team/team-2.avif" class="team-pic" alt="Aqsa Yaseen">
+                        </div>
+                        <h3 class="team_name">Aqsa Yaseen</h3>
+                        <p class="team_designation">Social Media Expert, E-commerce VA & Product Research Specialist</p>
+                        <p class="team_text">Specializing in elevating brand presence through strategic social media
+                            management, streamlining e-commerce store operations, and driving market success with highly
+                            targeted product research.</p>
+                        <p class="social-icons">
+                            <a href="#" target="_blank"><i class="ion-social-linkedin-outline"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
                     <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                         <div class="team-img">
                             <img src="images/team/team-7.png" class="team-pic" alt="Muti Ur Rehman">
@@ -369,7 +423,8 @@
                             to automate complex workflows, eliminate repetitive tasks, and scale operational efficiency.
                         </p>
                         <p class="social-icons">
-                            <a href="https://www.linkedin.com/in/muti-ur-rehman-574a75426/" target="_blank"><i class="ion-social-linkedin-outline"></i></a>
+                            <a href="https://www.linkedin.com/in/muti-ur-rehman-574a75426/" target="_blank"><i
+                                    class="ion-social-linkedin-outline"></i></a>
                         </p>
                     </div>
                 </div>
@@ -377,15 +432,16 @@
                 <div class="col-md-3">
                     <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
                         <div class="team-img">
-                            <img src="images/team/team-2.avif" class="team-pic" alt="Fatima Tariq">
+                            <img src="images/team/team-2.avif" class="team-pic" alt="Taliha">
                         </div>
-                        <h3 class="team_name">Fatima Tariq</h3>
-                        <p class="team_designation">Social Media Manager & Lead Generation Specialist</p>
-                        <p class="team_text">Expert in crafting compelling digital campaigns, managing brand presence
-                            across platforms, and driving targeted lead generation to accelerate business growth and
-                            engagement.</p>
+                        <h3 class="team_name">Taliha Abdul Sattar</h3>
+                        <p class="team_designation">React, SEO & Frontend App Developer</p>
+                        <p class="team_text">Specializing in building responsive web and mobile applications using
+                            React, Flutter, and Dart, while optimizing digital presence through advanced SEO strategies.
+                        </p>
                         <p class="social-icons">
-                            <a href="#" target="_blank"><i class="ion-social-linkedin-outline"></i></a>
+                            <a href="https://www.linkedin.com/in/taliha-sattar/" target="_blank"><i
+                                    class="ion-social-linkedin-outline"></i></a>
                         </p>
                     </div>
                 </div>
@@ -422,7 +478,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
+
+            </div> <!-- Close meet-the-team-row -->
         </div>
     </section>
 
