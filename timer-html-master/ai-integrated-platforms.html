@@ -27,137 +27,10 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Custom CSS strictly for this details page -->
-    <style>
-        /* WhatsApp Floating Button Hover Effect */
-        .whatsapp-float:hover {
-            background-color: #128c7e !important;
-            color: #fff !important;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Product Details Section Styles */
-        .product-details-section {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .product-image-wrapper {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: sticky;
-            top: 100px;
-        }
-
-        .product-image-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .product-info-wrapper h2 {
-            font-size: 32px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .product-info-wrapper .subtitle-lead {
-            font-size: 18px;
-            color: #02bdd5;
-            /* Brand Cyan */
-            font-weight: 500;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .product-info-wrapper>p {
-            color: #666;
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 40px;
-        }
-
-        /* Detailed Features Layout */
-        .detailed-feature-list {
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #02bdd5;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #f1f1f1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            font-size: 30px;
-            color: #02bdd5;
-            margin-right: 20px;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .feature-content h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: 600;
-            text-transform: capitalize;
-        }
-
-        .feature-content p {
-            margin: 0;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Action Buttons */
-        .btn-demo-solid {
-            background: #02bdd5;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-demo-solid i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .btn-demo-solid:hover {
-            background: #00A6BB;
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(2, 189, 213, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="css/product-details.css">
 </head>
 
-<body>
+<body class="product-page">
 
     <!-- Header Section -->
     <header id="top-bar" class="navbar-fixed-top animated-header">
@@ -201,159 +74,137 @@
         </div>
     </header>
 
-    <!-- Global Page Header -->
-    <section class="global-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h2>AI Integrated Platforms</h2>
-                        <ol class="breadcrumb">
+    <main id="main-content">
+        <section class="product-intro" aria-labelledby="product-title">
+            <div class="container">
+                <ol class="breadcrumb">
                             <li>
                                 <a href="index.html">
                                     <i class="ion-ios-home"></i> Home
                                 </a>
                             </li>
-                            <li><span class="active">/ Products / AI Solutions</span></li>
+                            <li><span class="active">Products / AI Solutions</span></li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Details Section -->
-    <section class="product-details-section">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column: Visuals (Sticky on desktop) -->
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-duration="500ms">
-                    <div class="product-image-wrapper">
-                        <!-- High Quality AI / Machine Learning Image -->
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
-                            alt="Artificial Intelligence Software Development" class="img-responsive">
-                    </div>
-                </div>
-
-                <!-- Right Column: Details & Features -->
-                <div class="col-md-7 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="product-info-wrapper">
-                        <h2>Smart Chatbots & Automated AI Agents</h2>
-                        <p class="subtitle-lead">
+                <span class="product-eyebrow">786 Solution / Our products</span>
+                <h1 id="product-title">AI Integrated Platforms</h1>
+                <p class="subtitle-lead">
                             🤖 Power Your Business with Intelligent Software
                         </p>
-                        <p>
+                <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20discuss%20a%20Custom%20AI%20Software%20Solution!" target="_blank" class="btn-demo-solid" rel="noopener noreferrer"><i class="ion-social-whatsapp" aria-hidden="true"></i> Request Demo</a>
+            </div>
+        </section>
+
+        <section class="product-details-section" aria-label="Product details">
+            <div class="container">
+                <figure class="product-image-wrapper">
+                    <img src="images/portfolio/item-6.avif" alt="Digital technology illustration for AI integrated platforms" width="800" height="534" decoding="async" fetchpriority="high">
+                    <figcaption>AI Integrated Platforms · Industry visual</figcaption>
+                </figure>
+
+                <section class="product-overview" aria-labelledby="overview-title">
+                    <span class="product-eyebrow">Product overview</span>
+                    <h2 id="overview-title">Smart Chatbots &amp; Automated AI Agents</h2>
+                    <p>
                             Step into the future with intelligent software designed to automate tasks, improve
                             decision-making, and boost productivity. At 786 Solution, we develop custom AI-powered
                             platforms that help businesses streamline operations, drastically reduce manual work, and
                             deliver smarter customer experiences.
                         </p>
+                </section>
 
-                        <!-- Detailed Feature Checklist -->
-                        <div class="detailed-feature-list">
+                <section class="product-features" aria-labelledby="features-title">
+                    <span class="product-eyebrow">Built for your business</span>
+                    <h2 id="features-title">Everything you need, in one place</h2>
+                    <div class="detailed-feature-list">
 
-                            <!-- Feature 1 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-chatbubble-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-chatbubble-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>AI Chatbots & Virtual Assistants</h4>
+                                    <h3>AI Chatbots &amp; Virtual Assistants</h3>
                                     <p>Transform your customer support. Deploy intelligent, natural language-processing
                                         chatbots that can handle customer queries 24/7, guide users through complex
                                         workflows, and seamlessly escalate issues to human agents.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 2 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-gear-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-gear-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Advanced Workflow Automation</h4>
+                                    <h3>Advanced Workflow Automation</h3>
                                     <p>Eliminate repetitive manual tasks. We build smart automated agents that can read
                                         emails, process data entries, trigger system actions, and streamline complex
                                         business operations without human intervention.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 3 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-pulse"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-pulse" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Predictive Insights & Business Intelligence</h4>
+                                    <h3>Predictive Insights &amp; Business Intelligence</h3>
                                     <p>Turn raw data into your biggest asset. Utilize machine learning algorithms to
                                         predict market trends, forecast inventory needs, optimize pricing strategies,
                                         and make data-driven decisions confidently.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 4 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-paper-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-paper-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Document & Image Processing</h4>
+                                    <h3>Document &amp; Image Processing</h3>
                                     <p>Digitize and extract value from paperwork instantly. Our AI solutions leverage
                                         advanced OCR (Optical Character Recognition) to automatically read, categorize,
                                         and extract structured data from invoices, receipts, and IDs.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 5 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-cloud-upload-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-cloud-upload-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Secure Cloud Integration & Monitoring</h4>
+                                    <h3>Secure Cloud Integration &amp; Monitoring</h3>
                                     <p>Easily connect AI capabilities to your existing cloud infrastructure. Benefit
                                         from real-time monitoring and proactive notifications, ensuring your automated
                                         systems are always secure and highly available.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 6 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-color-wand-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-color-wand-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Built for Your Industry</h4>
+                                    <h3>Built for Your Industry</h3>
                                     <p>Developed using powerful frameworks like <strong>Python, Odoo, and .NET
                                             Core</strong>, our scalable AI solutions are tailor-made for retail stores,
                                         restaurants, pharmacies, healthcare, manufacturing, and enterprise sectors.</p>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
-
-                        <p><strong>Transform your business with AI-driven solutions from 786 Solution and stay ahead of
-                                the competition.</strong></p>
-
-                        <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20discuss%20a%20Custom%20AI%20Software%20Solution!"
-                            target="_blank" class="btn-demo-solid mt-3">
-                            <i class="ion-social-whatsapp"></i> Consult Our AI Experts Today
-                        </a>
-                    </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action">
+        <section id="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">READY TO
+                        <h2 class="title">READY TO
                             INNOVATE WITH AI?</h2>
-                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                        <p class="">
                             Whether you need a robust management system, a dynamic e-commerce platform, or an AI-driven
                             application, 786 Solution is here to help.<br>Get in touch today to discuss your next big
                             project and schedule a personalized demo.
                         </p>
-                        <a href="https://wa.me/923245541969" target="_blank"
-                            class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
-                            data-wow-duration="500ms">Contact Us Today</a>
-                    </div>
+                        <p class="product-closing"><strong>Transform your business with AI-driven solutions from 786 Solution and stay ahead of
+                                the competition.</strong></p><div class="product-actions"><a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20discuss%20a%20Custom%20AI%20Software%20Solution!" target="_blank" class="btn-demo-solid mt-3" rel="noopener noreferrer">
+                            <i class="ion-social-whatsapp"></i> Consult Our AI Experts Today
+                        </a>
+                    <a href="https://wa.me/923245541969" target="_blank" class="btn btn-default btn-contact">Contact Us Today</a>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer Section -->
     <!-- ================================================== 

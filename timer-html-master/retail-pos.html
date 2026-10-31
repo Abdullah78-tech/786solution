@@ -26,137 +26,10 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Custom CSS strictly for this details page -->
-    <style>
-        /* WhatsApp Floating Button Hover Effect */
-        .whatsapp-float:hover {
-            background-color: #128c7e !important;
-            color: #fff !important;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Product Details Section Styles */
-        .product-details-section {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .product-image-wrapper {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: sticky;
-            top: 100px;
-        }
-
-        .product-image-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .product-info-wrapper h2 {
-            font-size: 32px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .product-info-wrapper .subtitle-lead {
-            font-size: 18px;
-            color: #02bdd5;
-            /* Brand Cyan */
-            font-weight: 500;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .product-info-wrapper>p {
-            color: #666;
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 40px;
-        }
-
-        /* Detailed Features Layout */
-        .detailed-feature-list {
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #02bdd5;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #f1f1f1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            font-size: 30px;
-            color: #02bdd5;
-            margin-right: 20px;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .feature-content h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: 600;
-            text-transform: capitalize;
-        }
-
-        .feature-content p {
-            margin: 0;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Action Buttons */
-        .btn-demo-solid {
-            background: #02bdd5;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-demo-solid i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .btn-demo-solid:hover {
-            background: #00A6BB;
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(2, 189, 213, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="css/product-details.css">
 </head>
 
-<body>
+<body class="product-page">
 
     <!-- Header Section -->
     <header id="top-bar" class="navbar-fixed-top animated-header">
@@ -200,160 +73,138 @@
         </div>
     </header>
 
-    <!-- Global Page Header -->
-    <section class="global-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h2>Retail POS System</h2>
-                        <ol class="breadcrumb">
+    <main id="main-content">
+        <section class="product-intro" aria-labelledby="product-title">
+            <div class="container">
+                <ol class="breadcrumb">
                             <li>
                                 <a href="index.html">
                                     <i class="ion-ios-home"></i> Home
                                 </a>
                             </li>
-                            <li><span class="active">/ Products / Retail POS</span></li>
+                            <li><span class="active">Products / Retail POS</span></li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Details Section -->
-    <section class="product-details-section">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column: Visuals (Sticky on desktop) -->
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-duration="500ms">
-                    <div class="product-image-wrapper">
-                        <!-- High Quality Retail POS Image (New & Unique for this page) -->
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
-                            alt="Retail Point of Sale Software" class="img-responsive">
-                    </div>
-                </div>
-
-                <!-- Right Column: Details & Features -->
-                <div class="col-md-7 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="product-info-wrapper">
-                        <h2>Real-Time Inventory & Sales Tracking</h2>
-                        <p class="subtitle-lead">
+                <span class="product-eyebrow">786 Solution / Our products</span>
+                <h1 id="product-title">Retail POS System</h1>
+                <p class="subtitle-lead">
                             🛍️ Elevate Your Retail Business with a Smarter Checkout Experience
                         </p>
-                        <p>
+                <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Retail%20POS%20System!" target="_blank" class="btn-demo-solid" rel="noopener noreferrer"><i class="ion-social-whatsapp" aria-hidden="true"></i> Request Demo</a>
+            </div>
+        </section>
+
+        <section class="product-details-section" aria-label="Product details">
+            <div class="container">
+                <figure class="product-image-wrapper">
+                    <img src="images/portfolio/item-7.avif" alt="Retail checkout with a customer and cashier" width="800" height="534" decoding="async" fetchpriority="high">
+                    <figcaption>Retail POS System · Industry visual</figcaption>
+                </figure>
+
+                <section class="product-overview" aria-labelledby="overview-title">
+                    <span class="product-eyebrow">Product overview</span>
+                    <h2 id="overview-title">Real-Time Inventory &amp; Sales Tracking</h2>
+                    <p>
                             Running a successful retail store requires speed, accuracy, and deep insights into what’s
                             selling. Our fully-featured Retail POS System is designed for clothing boutiques,
                             electronics shops, hardware stores, and general merchandise retailers. It empowers you to
                             manage multi-channel sales, track dynamic inventory, and cultivate customer loyalty from a
                             single, intuitive platform.
                         </p>
+                </section>
 
-                        <!-- Detailed Feature Checklist -->
-                        <div class="detailed-feature-list">
+                <section class="product-features" aria-labelledby="features-title">
+                    <span class="product-eyebrow">Built for your business</span>
+                    <h2 id="features-title">Everything you need, in one place</h2>
+                    <div class="detailed-feature-list">
 
-                            <!-- Feature 1 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-pricetags-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-pricetags-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Fast & Seamless Checkout</h4>
+                                    <h3>Fast &amp; Seamless Checkout</h3>
                                     <p>Deliver a frictionless customer experience. Process transactions instantly with
                                         rapid barcode scanning, custom shortcuts for popular items, and support for
                                         multiple payment methods including cash, card, and digital wallets.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 2 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-box-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-box-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Dynamic Inventory & Variant Tracking</h4>
+                                    <h3>Dynamic Inventory &amp; Variant Tracking</h3>
                                     <p>Never lose track of your stock. Easily manage items by size, color, or material.
                                         Receive automated low-stock alerts and instantly transfer inventory between
                                         different store locations or warehouses.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 3 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-pie-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-pie-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Sales & Performance Analytics</h4>
+                                    <h3>Sales &amp; Performance Analytics</h3>
                                     <p>Make data-backed decisions. Generate comprehensive daily, weekly, and monthly
                                         reports. Identify your best-selling products, track staff performance, and
                                         monitor your profit margins in real-time.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 4 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-people-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-people-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Customer Relationship Management (CRM)</h4>
+                                    <h3>Customer Relationship Management (CRM)</h3>
                                     <p>Turn one-time shoppers into lifelong patrons. Capture customer profiles, track
                                         individual purchase histories, and create custom loyalty programs or discount
                                         tiers to reward your best buyers.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 5 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-world-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-world-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Multi-Store Management</h4>
+                                    <h3>Multi-Store Management</h3>
                                     <p>Growing your brand? Manage multiple retail branches effortlessly from a
                                         centralized administrative dashboard. Standardize pricing, track cross-store
                                         sales, and monitor total business health from anywhere.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 6 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-locked-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-locked-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Cloud Backup & Role-Based Security</h4>
+                                    <h3>Cloud Backup &amp; Role-Based Security</h3>
                                     <p>Keep your business data impenetrable. Secure your operations with customized
                                         cashier and manager permissions, shift-tracking, and automatic cloud backups
                                         that protect against hardware failure.</p>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
-
-                        <p><strong>Transform the way you sell and grow your retail footprint effortlessly with 786
-                                Solution.</strong></p>
-
-                        <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Retail%20POS%20System!"
-                            target="_blank" class="btn-demo-solid mt-3">
-                            <i class="ion-social-whatsapp"></i> Book a FREE Demo Today
-                        </a>
-                    </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action">
+        <section id="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">READY TO UPGRADE
+                        <h2 class="title">READY TO UPGRADE
                             YOUR RETAIL STORE?</h2>
-                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                        <p class="">
                             Whether you need a robust management system, a dynamic e-commerce platform, or an AI-driven
                             application, 786 Solution is here to help.<br>Get in touch today to discuss your next big
                             project and schedule a personalized demo.
                         </p>
-                        <a href="https://wa.me/923245541969" target="_blank"
-                            class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
-                            data-wow-duration="500ms">Contact Us Today</a>
-                    </div>
+                        <p class="product-closing"><strong>Transform the way you sell and grow your retail footprint effortlessly with 786
+                                Solution.</strong></p><div class="product-actions"><a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Retail%20POS%20System!" target="_blank" class="btn-demo-solid mt-3" rel="noopener noreferrer">
+                            <i class="ion-social-whatsapp"></i> Book a FREE Demo Today
+                        </a>
+                    <a href="https://wa.me/923245541969" target="_blank" class="btn btn-default btn-contact">Contact Us Today</a>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer Section -->
     <!-- ================================================== 

@@ -1,0 +1,110 @@
+/* Shared product pages only; the site's header, footer and other pages retain their styles. */
+.product-page {
+  --product-navy: #102d40;
+  --product-teal: #007f90;
+  --product-cyan: #02bdd5;
+  --product-muted: #526776;
+}
+.product-page main { font-family: 'Roboto', Arial, sans-serif; color: var(--product-navy); }
+.product-page main p { font-size: 16px; line-height: 1.8; }
+.product-page .product-intro {
+  padding: 132px 0 52px;
+  background: linear-gradient(135deg, #edfafd, #f8fbfc 65%, #e6f6f8);
+  border-bottom: 1px solid #dcecf0;
+}
+.product-page .product-intro .breadcrumb {
+  padding: 0; margin: 0 0 28px; background: transparent; font-size: 13px;
+}
+.product-page .product-intro .breadcrumb a { color: var(--product-teal); }
+.product-page .product-intro .breadcrumb .active { color: var(--product-muted); }
+.product-page .product-eyebrow {
+  display: block; margin: 0 0 12px; color: var(--product-teal);
+  font-size: 12px; line-height: 1.5; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+}
+.product-page .product-intro h1 {
+  max-width: 900px; margin: 0 0 18px; color: var(--product-navy);
+  font-size: clamp(32px, 4vw, 54px); line-height: 1.15; font-weight: 700;
+  letter-spacing: -1.3px; text-transform: none;
+}
+.product-page .product-intro .subtitle-lead {
+  max-width: 740px; margin: 0 0 28px; color: var(--product-muted); font-size: 19px; line-height: 1.7;
+}
+.product-page .btn-demo-solid,
+.product-page #call-to-action .btn-contact {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; max-width: 100%; padding: 14px 24px; border: 1px solid transparent;
+  border-radius: 8px; background: var(--product-teal); color: #fff;
+  font-size: 14px; font-weight: 600; line-height: 1.5; text-transform: none;
+  letter-spacing: 0; white-space: normal; text-align: center; text-decoration: none;
+  transition: background-color .18s ease, box-shadow .18s ease;
+}
+.product-page .btn-demo-solid i { font-size: 22px; line-height: 1; }
+.product-page .btn-demo-solid:hover { background: #006b79; color: #fff; box-shadow: 0 6px 18px #007f9026; }
+.product-page main a:focus-visible { outline: 3px solid var(--product-cyan); outline-offset: 5px; }
+.product-page .product-details-section { padding: 48px 0 80px; background: #fff; }
+.product-page .product-image-wrapper {
+  margin: 0 0 64px; padding: 12px; border: 1px solid #dfebef; border-radius: 18px;
+  background: #f3f7f9; box-shadow: 0 20px 50px -20px #102d4040;
+}
+.product-page .product-image-wrapper img {
+  display: block; width: 100%; height: auto; border-radius: 10px; object-fit: contain;
+}
+.product-page .product-image-wrapper figcaption {
+  padding: 14px 8px 3px; color: var(--product-muted); font-size: 13px; line-height: 1.6;
+}
+.product-page .product-overview { max-width: 860px; margin: 0 auto 64px; }
+.product-page .product-overview h2,
+.product-page .product-features h2 {
+  margin: 0 0 20px; color: var(--product-navy); font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.3; font-weight: 700; letter-spacing: -.5px; text-transform: none;
+}
+.product-page .product-overview > p { margin: 0; color: var(--product-muted); font-size: 18px; line-height: 1.9; }
+.product-page .product-features > h2 { margin-bottom: 28px; }
+.product-page .detailed-feature-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.product-page .feature-item {
+  display: flex; align-items: flex-start; gap: 18px; min-width: 0; padding: 28px;
+  border: 1px solid #e0eaee; border-radius: 12px; background: #f8fbfc;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.product-page .feature-item:hover { border-color: #81d9e3; box-shadow: 0 8px 24px #102d400a; }
+.product-page .feature-icon {
+  display: flex; flex: 0 0 46px; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 10px; background: #e2f5f7;
+  color: var(--product-teal); font-size: 28px; line-height: 1;
+}
+.product-page .feature-content { min-width: 0; }
+.product-page .feature-content h3 { margin: 0 0 12px; color: var(--product-navy); font-size: 19px; line-height: 1.4; font-weight: 600; text-transform: none; }
+.product-page .feature-content p { margin: 0; color: var(--product-muted); font-size: 15px; line-height: 1.8; }
+.product-page #call-to-action { padding: 72px 0; background: var(--product-navy); text-align: left; }
+.product-page #call-to-action .block { max-width: 900px; margin: auto; }
+.product-page #call-to-action .block h2 { margin: 0 0 20px; font-size: clamp(26px, 3vw, 36px); line-height: 1.3; text-transform: none; }
+.product-page #call-to-action .block p { margin: 0 0 24px; color: #d0e1ea; font: inherit; font-size: 16px; line-height: 1.8; }
+.product-page #call-to-action .product-closing strong { color: #fff; font-weight: 500; }
+.product-page .product-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.product-page #call-to-action .btn-demo-solid { background: var(--product-cyan); color: var(--product-navy); }
+.product-page #call-to-action .btn-demo-solid:hover { background: #7de3ef; }
+.product-page #call-to-action .btn-contact { margin: 0; background: transparent; border-color: #8faab9; color: #fff; }
+.product-page #call-to-action .btn-contact:hover { background: #23485e; }
+.product-page .whatsapp-float:hover { background-color: #128c7e !important; }
+@media (max-width: 767px) {
+  .product-page .product-intro { padding: 110px 0 32px; }
+  .product-page .product-intro h1 { letter-spacing: -.7px; }
+  .product-page .product-intro .subtitle-lead { font-size: 17px; }
+  .product-page .product-details-section { padding: 28px 0 48px; }
+  .product-page .product-image-wrapper { padding: 6px; margin-bottom: 40px; border-radius: 12px; }
+  .product-page .product-image-wrapper img { border-radius: 7px; }
+  .product-page .product-overview { margin-bottom: 40px; }
+  .product-page .product-overview > p { font-size: 16px; }
+  .product-page .detailed-feature-list { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .product-page .feature-item { padding: 22px 18px; gap: 14px; }
+  .product-page .feature-icon { flex-basis: 40px; width: 40px; height: 40px; font-size: 25px; }
+  .product-page #call-to-action { padding: 48px 0; }
+  .product-page .product-actions { align-items: stretch; flex-direction: column; }
+  .product-page .whatsapp-float { width: 48px !important; height: 48px !important; right: 16px !important; bottom: 16px !important; font-size: 26px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-page main *, .product-page .whatsapp-float { transition: none !important; animation: none !important; }
+}
+
+/* Keep the existing feature class while mapping it to the bundled Ionicons pulse glyph. */
+.product-page .feature-icon .ion-ios-pulse-outline:before { content: "\f493"; }

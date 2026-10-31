@@ -26,137 +26,10 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Custom CSS strictly for this details page -->
-    <style>
-        /* WhatsApp Floating Button Hover Effect */
-        .whatsapp-float:hover {
-            background-color: #128c7e !important;
-            color: #fff !important;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Product Details Section Styles */
-        .product-details-section {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .product-image-wrapper {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: sticky;
-            top: 100px;
-        }
-
-        .product-image-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .product-info-wrapper h2 {
-            font-size: 32px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .product-info-wrapper .subtitle-lead {
-            font-size: 18px;
-            color: #02bdd5;
-            /* Brand Cyan */
-            font-weight: 500;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .product-info-wrapper>p {
-            color: #666;
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 40px;
-        }
-
-        /* Detailed Features Layout */
-        .detailed-feature-list {
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #02bdd5;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #f1f1f1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            font-size: 30px;
-            color: #02bdd5;
-            margin-right: 20px;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .feature-content h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: 600;
-            text-transform: capitalize;
-        }
-
-        .feature-content p {
-            margin: 0;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Action Buttons */
-        .btn-demo-solid {
-            background: #02bdd5;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-demo-solid i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .btn-demo-solid:hover {
-            background: #00A6BB;
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(2, 189, 213, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="css/product-details.css">
 </head>
 
-<body>
+<body class="product-page">
 
     <!-- Header Section -->
     <header id="top-bar" class="navbar-fixed-top animated-header">
@@ -200,169 +73,146 @@
         </div>
     </header>
 
-    <!-- Global Page Header -->
-    <section class="global-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h2>Pharmacy Management System</h2>
-                        <ol class="breadcrumb">
+    <main id="main-content">
+        <section class="product-intro" aria-labelledby="product-title">
+            <div class="container">
+                <ol class="breadcrumb">
                             <li>
                                 <a href="index.html">
                                     <i class="ion-ios-home"></i> Home
                                 </a>
                             </li>
-                            <li><span class="active">/ Products / Pharmacy POS</span></li>
+                            <li><span class="active">Products / Pharmacy POS</span></li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Details Section -->
-    <section class="product-details-section">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column: Visuals (Sticky on desktop) -->
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-duration="500ms">
-                    <div class="product-image-wrapper">
-                        <!-- High Quality Pharmacy/Medical Technology Image -->
-                        <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=800&q=80"
-                            alt="Pharmacy POS Software" class="img-responsive">
-                    </div>
-                </div>
-
-                <!-- Right Column: Details & Features -->
-                <div class="col-md-7 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="product-info-wrapper">
-                        <h2>Secure POS with Expiry & Batch Tracking</h2>
-                        <p class="subtitle-lead">
-                            💊 Manage Your Medical Store with Confidence & Precision
+                <span class="product-eyebrow">786 Solution / Our products</span>
+                <h1 id="product-title">Pharmacy Management System</h1>
+                <p class="subtitle-lead">
+                            💊 Manage Your Medical Store with Confidence &amp; Precision
                         </p>
-                        <p>
+                <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Pharmacy%20Management%20System!" target="_blank" class="btn-demo-solid" rel="noopener noreferrer"><i class="ion-social-whatsapp" aria-hidden="true"></i> Request Demo</a>
+            </div>
+        </section>
+
+        <section class="product-details-section" aria-label="Product details">
+            <div class="container">
+                <figure class="product-image-wrapper">
+                    <img src="images/portfolio/item-5.avif" alt="Medicines in pharmacy blister packs" width="800" height="559" decoding="async" fetchpriority="high">
+                    <figcaption>Pharmacy Management System · Industry visual</figcaption>
+                </figure>
+
+                <section class="product-overview" aria-labelledby="overview-title">
+                    <span class="product-eyebrow">Product overview</span>
+                    <h2 id="overview-title">Secure POS with Expiry &amp; Batch Tracking</h2>
+                    <p>
                             Simplify your daily operations with our modern, intelligent Pharmacy Management System.
                             Built specifically for pharmacies and medical stores, this platform empowers you to manage
                             medicines, sales, purchases, and prescriptions while ensuring absolute inventory accuracy.
                         </p>
+                </section>
 
-                        <!-- Detailed Feature Checklist -->
-                        <div class="detailed-feature-list">
+                <section class="product-features" aria-labelledby="features-title">
+                    <span class="product-eyebrow">Built for your business</span>
+                    <h2 id="features-title">Everything you need, in one place</h2>
+                    <div class="detailed-feature-list">
 
-                            <!-- Feature 1 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-box-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-box-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Batch & Lot Number Management</h4>
+                                    <h3>Batch &amp; Lot Number Management</h3>
                                     <p>Maintain total compliance and quality control. The system ensures every medicine
                                         is stored and tracked using its unique batch and lot number, making product
                                         recalls and audits effortless.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 2 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-location-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-location-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Rack & Shelf Location Tracking</h4>
+                                    <h3>Rack &amp; Shelf Location Tracking</h3>
                                     <p>Find medicines instantly during busy hours. By saving the specific rack and shelf
                                         location of every product in the database, you can dramatically reduce search
                                         time and serve patients faster.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 3 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-alarm-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-alarm-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Expiry Date & Low Stock Alerts</h4>
+                                    <h3>Expiry Date &amp; Low Stock Alerts</h3>
                                     <p>Never dispense expired medications again. Our software proactively tracks shelf
                                         life and live stock quantities, sending automated alerts for impending expiries
                                         and items running low on stock.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 4 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-barcode-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-barcode-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Barcode Scanning & Fast Billing</h4>
+                                    <h3>Barcode Scanning &amp; Fast Billing</h3>
                                     <p>Speed up the checkout process to keep lines moving. Support rapid barcode
                                         scanning for immediate pricing retrieval, ensuring high-speed billing and zero
                                         manual entry errors at the counter.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 5 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-paper-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-paper-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Prescription & Customer Records</h4>
+                                    <h3>Prescription &amp; Customer Records</h3>
                                     <p>Build trust with a secure database. Safely record patient details, store digital
                                         prescriptions, and track purchase histories to provide personalized service and
                                         streamline repeat orders.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 6 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-cart-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-cart-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Purchase & Supplier Management</h4>
+                                    <h3>Purchase &amp; Supplier Management</h3>
                                     <p>Optimize your supply chain. Easily track incoming shipments, process purchase
                                         orders, handle damaged returns, and manage all supplier communication directly
                                         from a centralized dashboard.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 7 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-analytics-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-analytics-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Analytics & Secure Cloud Backup</h4>
+                                    <h3>Analytics &amp; Secure Cloud Backup</h3>
                                     <p>Make data-driven decisions with detailed sales, profit, and inventory reports.
                                         Assign multi-user access with specific roles and rely on secure cloud backups to
                                         keep your pharmacy data safe.</p>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
-
-                        <p><strong>Digitize your medical store to experience smarter, faster, and more reliable pharmacy
-                                management.</strong></p>
-
-                        <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Pharmacy%20Management%20System!"
-                            target="_blank" class="btn-demo-solid mt-3">
-                            <i class="ion-social-whatsapp"></i> Get a FREE Demo Today
-                        </a>
-                    </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action">
+        <section id="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">READY TO
+                        <h2 class="title">READY TO
                             MODERNIZE YOUR PHARMACY?</h2>
-                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                        <p class="">
                             Whether you need a robust management system, a dynamic e-commerce platform, or an AI-driven
                             application, 786 Solution is here to help.<br>Get in touch today to discuss your next big
                             project and schedule a personalized demo.
                         </p>
-                        <a href="https://wa.me/923245541969" target="_blank"
-                            class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
-                            data-wow-duration="500ms">Contact Us Today</a>
-                    </div>
+                        <p class="product-closing"><strong>Digitize your medical store to experience smarter, faster, and more reliable pharmacy
+                                management.</strong></p><div class="product-actions"><a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Pharmacy%20Management%20System!" target="_blank" class="btn-demo-solid mt-3" rel="noopener noreferrer">
+                            <i class="ion-social-whatsapp"></i> Get a FREE Demo Today
+                        </a>
+                    <a href="https://wa.me/923245541969" target="_blank" class="btn btn-default btn-contact">Contact Us Today</a>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer Section -->
     <!-- ================================================== 
