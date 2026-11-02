@@ -45,7 +45,7 @@
             event.preventDefault();
             const status = document.getElementById("contact-status");
             const submit = document.getElementById("contact-submit");
-            const directMail = "mailto:contact.786solution@gmail.com";
+            const directMail = "mailto:info@786solution.com";
             const endpoint = (form.getAttribute("data-api-url") || "").trim();
             const safeMessage = function(message, error) {
                 status.hidden = false;
@@ -92,10 +92,10 @@
                     safeMessage("Your message was sent successfully. Thank you!", false);
                     form.reset();
                 } else {
-                    safeMessage("Message could not be sent. Please email contact.786solution@gmail.com directly.", true);
+                    safeMessage("Message could not be sent. Please email info@786solution.com directly.", true);
                 }
             } catch (error) {
-                safeMessage("Could not reach our contact service. Please email contact.786solution@gmail.com directly.", true);
+                safeMessage("Could not reach our contact service. Please email info@786solution.com directly.", true);
             } finally { submit.disabled = false; }
         });
     }
