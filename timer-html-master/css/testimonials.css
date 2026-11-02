@@ -61,3 +61,11 @@
 @media(max-width:767px){.testimonials-redesign .stories-hero{padding:60px 0}.testimonials-redesign .stories-hero-grid{grid-template-columns:1fr}.testimonials-redesign .stories-intro h1{font-size:38px}.testimonials-redesign .stories-feedback,.testimonials-redesign .stories-solutions{padding:65px 0}.testimonials-redesign .stories-feedback-empty{grid-template-columns:1fr;padding:28px}.testimonials-redesign .stories-feedback-symbol{height:130px;max-width:170px}.testimonials-redesign .stories-feedback-symbol span{height:56px;font-size:73px}.testimonials-redesign .stories-feedback-empty h3{font-size:23px}.testimonials-redesign .stories-card-grid{grid-template-columns:1fr}.testimonials-redesign .stories-card img{height:230px}.testimonials-redesign .stories-card p{min-height:0}.testimonials-redesign .stories-cta-content{display:block}.testimonials-redesign .stories-button.white{margin-top:25px}}
 @media(max-width:450px){.testimonials-redesign .stories-intro h1{font-size:32px}.testimonials-redesign .stories-actions{flex-direction:column}.testimonials-redesign .stories-actions a{width:100%}.testimonials-redesign .stories-card img{height:190px}}
 @media(prefers-reduced-motion:reduce){.testimonials-redesign .stories-button,.testimonials-redesign .stories-card{transition:none}}
+
+/* Layout correction: prevent inherited Bootstrap floats from splitting hero into diagonal blocks. */
+.testimonials-redesign .stories-hero{margin-top:0!important;padding:82px 0 86px!important;min-height:0!important}
+.testimonials-redesign .stories-hero-grid{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:55px!important}
+.testimonials-redesign .stories-hero-grid>.stories-intro{flex:1 1 54%;min-width:0;float:none!important;text-align:left!important}
+.testimonials-redesign .stories-hero-grid>.stories-method{flex:1 1 42%;min-width:0;float:none!important;margin:0!important}
+.testimonials-redesign .stories-intro h1{margin-top:0!important}
+@media(max-width:767px){.testimonials-redesign .stories-hero{padding:55px 0 65px!important}.testimonials-redesign .stories-hero-grid{flex-direction:column!important;align-items:stretch!important;gap:30px!important}.testimonials-redesign .stories-hero-grid>.stories-intro,.testimonials-redesign .stories-hero-grid>.stories-method{flex:1 1 auto;width:100%}}
