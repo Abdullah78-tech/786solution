@@ -1,0 +1,23 @@
+/* Shared 786 Solution responsive header */
+#top-bar.site-header,#top-bar.site-header.animated-header{padding:0!important;background:#fff!important;border-bottom:1px solid #e6edf3;box-shadow:0 3px 16px rgba(15,41,67,.06)}
+.site-header .header-shell{display:grid;grid-template-columns:minmax(140px,1fr) auto minmax(255px,1fr);min-height:76px;align-items:center;gap:17px}
+.site-header .site-brand a{display:inline-flex;align-items:center}.site-header .site-brand img{display:block;width:auto;height:auto;max-width:145px;max-height:55px;object-fit:contain}
+.site-header .site-nav{float:none!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important}
+.site-header .site-menu{display:flex;justify-content:center;align-items:center;gap:2px;float:none!important;margin:0;padding:0;list-style:none}
+.site-header .site-menu>li{float:none!important}
+#top-bar.site-header .site-menu>li>a{display:block!important;color:#34485e!important;font-size:13px!important;font-weight:650!important;text-transform:none!important;white-space:nowrap;line-height:1.4!important;padding:12px 11px!important;background:transparent!important;border:0!important;border-radius:9px}
+#top-bar.site-header .site-menu>li>a:hover,#top-bar.site-header .site-menu>li>a:focus{color:#007d92!important;background:#effafb!important}
+#top-bar.site-header .site-menu>li>a[aria-current="page"]{color:#008295!important;background:#e8f7f8!important}
+.site-header .header-actions{display:flex;align-items:center;justify-content:flex-end;gap:16px}
+.site-header .header-expert{display:flex;flex-direction:column;gap:3px;text-align:right;white-space:nowrap}
+.site-header .header-expert span{color:#78889b;font-size:11px;line-height:1.2;font-weight:600}
+#top-bar.site-header .header-expert a{color:#1c3854;font-size:14px;font-weight:780;text-decoration:none;line-height:1.2}
+#top-bar.site-header .header-expert a:hover{color:#008fa2}
+#top-bar.site-header .header-cta{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;padding:12px 19px;border-radius:24px;background:#1974db;color:#fff!important;font-size:13px;font-weight:760;text-decoration:none;box-shadow:0 4px 12px rgba(25,116,219,.2)}
+#top-bar.site-header .header-cta:hover{background:#095cb6}
+.site-header .site-nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;min-width:42px;min-height:40px;padding:8px;margin:0;border-radius:9px;border:1px solid #d8e5ed;background:#f5f9fb}
+.site-header .site-nav-toggle .icon-bar{background:#1c3f59;height:2px;width:21px;margin:2px 0}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:3px solid #11b7c3;outline-offset:3px}
+@media(min-width:992px) and (max-width:1199px){.site-header .header-shell{grid-template-columns:minmax(120px,1fr) auto minmax(230px,1fr);gap:7px}.site-header .site-brand img{max-width:125px}#top-bar.site-header .site-menu>li>a{font-size:12px!important;padding:11px 8px!important}.site-header .header-actions{gap:10px}#top-bar.site-header .header-cta{padding:11px 14px}}
+@media(max-width:991px){.site-header .header-shell{display:flex;flex-wrap:wrap;justify-content:space-between;min-height:72px;gap:0}.site-header .site-brand{flex:1 1 auto}.site-header .site-brand img{max-width:130px}.site-header .header-actions{gap:11px}.site-header .header-expert{display:none}#top-bar.site-header .header-cta{padding:10px 15px}.site-header .site-nav-toggle{display:flex}.site-header .site-nav.collapse{order:3;flex-basis:100%;width:100%;max-height:calc(100vh - 83px);overflow-y:auto!important;clear:both}.site-header .site-nav.collapse:not(.in){display:none!important}.site-header .site-nav.collapse.in{display:block!important}.site-header .site-menu{flex-direction:column;align-items:stretch;gap:2px;padding:11px 0 15px}.site-header .site-menu>li{float:none!important;width:100%}#top-bar.site-header .site-menu>li>a{font-size:14px!important;padding:12px 16px!important}}
+@media(max-width:410px){.site-header .site-brand img{max-width:110px}#top-bar.site-header .header-cta{padding:10px;font-size:12px}.site-header .header-actions{gap:7px}.site-header .site-nav-toggle{min-width:38px;padding:7px}}
