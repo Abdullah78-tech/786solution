@@ -5,7 +5,7 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/logo.png?v=2">
     <title>Restaurant Management Software - 786 Solution</title>
     <meta name="description" content="Advanced POS & Inventory Tracking for Restaurants, Cafes, and Food Chains.">
 
@@ -26,343 +26,155 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Custom CSS strictly for this details page -->
-    <style>
-        /* WhatsApp Floating Button Hover Effect */
-        .whatsapp-float:hover {
-            background-color: #128c7e !important;
-            color: #fff !important;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Product Details Section Styles */
-        .product-details-section {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .product-image-wrapper {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            position: sticky;
-            top: 100px;
-        }
-
-        .product-image-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .product-info-wrapper h2 {
-            font-size: 32px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .product-info-wrapper .subtitle-lead {
-            font-size: 18px;
-            color: #02bdd5;
-            /* Brand Cyan */
-            font-weight: 500;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .product-info-wrapper>p {
-            color: #666;
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 40px;
-        }
-
-        /* Detailed Features Layout */
-        .detailed-feature-list {
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #02bdd5;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #f1f1f1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            font-size: 30px;
-            color: #02bdd5;
-            margin-right: 20px;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .feature-content h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: 600;
-            text-transform: capitalize;
-        }
-
-        .feature-content p {
-            margin: 0;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Action Buttons */
-        .btn-demo-solid {
-            background: #02bdd5;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-demo-solid i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .btn-demo-solid:hover {
-            background: #00A6BB;
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(2, 189, 213, 0.4);
-        }
-    </style>
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="css/site-header.css">
 </head>
 
-<body>
+<body class="product-page">
 
     <!-- Header Section -->
-    <header id="top-bar" class="navbar-fixed-top animated-header">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-brand">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="786 Solution"
-                            style="max-width: 200px; max-height: 50px; width: auto; height: auto; mix-blend-mode: multiply;">
-                    </a>
-                </div>
-            </div>
-            <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                <div class="main-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="testimonial.html">Testimonials</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span
-                                    class="caret"></span></a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a href="blog-fullwidth.html">Blog Full</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog Left sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right sidebar</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header id="top-bar" class="site-header navbar-fixed-top animated-header"><div class="container header-shell"><div class="site-brand"><a href="index.html" aria-label="786 Solution home"><img src="images/logo.png" alt="786 Solution" width="145" height="58"></a></div><nav class="collapse navbar-collapse site-nav" id="site-primary-navigation" aria-label="Primary navigation"><div class="main-menu"><ul class="nav navbar-nav site-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="service.html" aria-current="page">Services</a></li><li><a href="testimonial.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav><div class="header-actions"><div class="header-expert"><span>Talk to an expert</span><a href="tel:+14438665893">+1 443 866 5893</a></div><a href="contact.html" class="header-cta">Get Started</a><button type="button" class="site-nav-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#site-primary-navigation" aria-controls="site-primary-navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div></div></header>
 
-    <!-- Global Page Header -->
-    <section class="global-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h2>Restaurant Management Software</h2>
-                        <ol class="breadcrumb">
+    <main id="main-content">
+        <section class="product-intro" aria-labelledby="product-title">
+            <div class="container">
+                <ol class="breadcrumb">
                             <li>
                                 <a href="index.html">
                                     <i class="ion-ios-home"></i> Home
                                 </a>
                             </li>
-                            <li><span class="active">/ Products / Restaurant POS</span></li>
+                            <li><span class="active">Products / Restaurant POS</span></li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Details Section -->
-    <section class="product-details-section">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column: Visuals (Sticky on desktop) -->
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-duration="500ms">
-                    <div class="product-image-wrapper">
-                        <!-- Using the portfolio image referenced in your index.html -->
-                        <img src="images/portfolio/item-1.avif" alt="Restaurant POS System Interface"
-                            class="img-responsive">
-                    </div>
-                </div>
-
-                <!-- Right Column: Details & Features -->
-                <div class="col-md-7 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="product-info-wrapper">
-                        <h2>Advanced POS & Inventory Tracking</h2>
-                        <p class="subtitle-lead">
+                <span class="product-eyebrow">786 Solution / Our products</span>
+                <h1 id="product-title">Restaurant Management Software</h1>
+                <p class="subtitle-lead">
                             🍽️ Run your restaurant smarter with 786 Solution's Restaurant POS Software!
                         </p>
-                        <p>
+                <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Restaurant%20POS%20Software!" target="_blank" class="btn-demo-solid" rel="noopener noreferrer"><i class="ion-social-whatsapp" aria-hidden="true"></i> Request Demo</a>
+            </div>
+        </section>
+
+        <section class="product-details-section" aria-label="Product details">
+            <div class="container">
+                <figure class="product-image-wrapper">
+                    <img src="images/products/restaurant-management-detail.webp" alt="Illustrative restaurant POS counter with staff taking orders, payment terminal and kitchen operations" width="1672" height="941" decoding="async" fetchpriority="high">
+                    <figcaption>Restaurant Management Software · Illustrative business scene (not a software screenshot)</figcaption>
+                </figure>
+
+                <section class="product-overview" aria-labelledby="overview-title">
+                    <span class="product-eyebrow">Product overview</span>
+                    <h2 id="overview-title">Advanced POS &amp; Inventory Tracking</h2>
+                    <p>
                             Whether you own a café, a bustling restaurant, or a growing food chain, our robust
                             Odoo-based POS helps you manage everything from a single, unified system. We have designed
                             this software to eliminate paperwork, reduce human error, and accelerate your service speed.
                         </p>
+                </section>
 
-                        <!-- Detailed Feature Checklist -->
-                        <div class="detailed-feature-list">
+                <section class="product-features" aria-labelledby="features-title">
+                    <span class="product-eyebrow">Built for your business</span>
+                    <h2 id="features-title">Everything you need, in one place</h2>
+                    <div class="detailed-feature-list">
 
-                            <!-- Feature 1 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-calendar-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-calendar-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Dine-In Orders & Table Reservations</h4>
+                                    <h3>Dine-In Orders &amp; Table Reservations</h3>
                                     <p>Seamlessly book tables in advance and manage walk-in customers. Our intuitive
                                         interface allows your staff to quickly assign parties to tables, avoiding
                                         double-bookings and minimizing customer wait times.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 2 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-android-bicycle"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-android-bicycle" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Take Away & Home Delivery</h4>
+                                    <h3>Take Away &amp; Home Delivery</h3>
                                     <p>Handle off-premises orders with ease. Track delivery rider status, manage
                                         specific packaging requirements, and ensure that delivery times are closely
                                         monitored for maximum customer satisfaction.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 3 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-grid-view-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-grid-view-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Visual Floor Management</h4>
+                                    <h3>Visual Floor Management</h3>
                                     <p>Map out your restaurant's exact layout digitally. Your staff can easily monitor
                                         table status (available, occupied, billed), transfer tickets between tables, or
                                         split bills directly from the floor plan.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 4 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-printer-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-printer-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Professional Custom Billing</h4>
+                                    <h3>Professional Custom Billing</h3>
                                     <p>Generate highly professional, customized receipts featuring your restaurant's
                                         logo and contact details. Support for multiple payment methods, split payments,
                                         and fast checkout keeps the line moving.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 5 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-android-restaurant"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-android-restaurant" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Live Kitchen Order Tracking (KOT)</h4>
+                                    <h3>Live Kitchen Order Tracking (KOT)</h3>
                                     <p>Send orders directly from the POS to the Kitchen Display System (KDS) or kitchen
                                         printers instantly. This reduces miscommunications, improves food prep times,
                                         and keeps front-of-house staff updated.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 6 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-social-usd"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-social-usd" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>Cash Flow & Inventory Management</h4>
+                                    <h3>Cash Flow &amp; Inventory Management</h3>
                                     <p>Keep a tight grip on your finances and stock levels. Track daily ingredient
                                         consumption, manage vendor payments, and set up low-stock alerts so you never
                                         run out of your best-selling items.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Feature 7 -->
-                            <div class="feature-item">
-                                <div class="feature-icon"><i class="ion-ios-pie-outline"></i></div>
+                            <article class="feature-item">
+                                <div class="feature-icon"><i class="ion-ios-pie-outline" aria-hidden="true"></i></div>
                                 <div class="feature-content">
-                                    <h4>End-of-Day Sales & Reports</h4>
+                                    <h3>End-of-Day Sales &amp; Reports</h3>
                                     <p>Automate your daily closing process. Generate comprehensive analytics detailing
                                         sales by category, peak hours, cashier shift summaries, and profit margins with
                                         just a single click.</p>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
-
-                        <p><strong>No more paperwork. No more confusion. Just one powerful system for your entire
-                                restaurant.</strong></p>
-
-                        <a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Restaurant%20POS%20Software!"
-                            target="_blank" class="btn-demo-solid mt-3">
-                            <i class="ion-social-whatsapp"></i> Get a FREE Demo Today
-                        </a>
-                    </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action">
+        <section id="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">READY TO
+                        <h2 class="title">READY TO
                             TRANSFORM YOUR BUSINESS?</h2>
-                        <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                        <p class="">
                             Whether you need a robust management system, a dynamic e-commerce platform, or an AI-driven
                             application, 786 Solution is here to help.<br>Get in touch today to discuss your next big
                             project and schedule a personalized demo.
                         </p>
-                        <a href="https://wa.me/923245541969" target="_blank"
-                            class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s"
-                            data-wow-duration="500ms">Contact Us Today</a>
-                    </div>
+                        <p class="product-closing"><strong>No more paperwork. No more confusion. Just one powerful system for your entire
+                                restaurant.</strong></p><div class="product-actions"><a href="https://wa.me/923245541969?text=Hello%20786%20Solution,%20I%20would%20like%20to%20book%20a%20FREE%20demo%20for%20the%20Restaurant%20POS%20Software!" target="_blank" class="btn-demo-solid mt-3" rel="noopener noreferrer">
+                            <i class="ion-social-whatsapp"></i> Get a FREE Demo Today
+                        </a>
+                    <a href="https://wa.me/923245541969" target="_blank" class="btn btn-default btn-contact">Contact Us Today</a>
+                    </div></div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer Section -->
     <!-- ================================================== 
@@ -382,26 +194,19 @@
                         Engineering digital transformations with enterprise software, AI agents, POS systems, and
                         high-performance e-commerce platforms. Over a decade of innovation and growth.
                     </p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon" title="Facebook"><i class="ion-social-facebook"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><i
-                                class="ion-social-linkedin"></i></a>
-                        <a href="https://wa.me/923245541969" target="_blank" class="social-icon" title="WhatsApp"><i
-                                class="ion-social-whatsapp"></i></a>
-                    </div>
+                    <div class="footer-social"><a href="mailto:contact.786solution@gmail.com" class="social-icon" title="Email 786 Solution" aria-label="Email 786 Solution"><i class="ion-ios-email" aria-hidden="true"></i></a><a href="https://wa.me/923245541969" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp 786 Solution" aria-label="WhatsApp 786 Solution"><i class="ion-social-whatsapp" aria-hidden="true"></i></a></div>
                 </div>
 
                 <!-- Column 2: Our Solutions -->
                 <div class="col-md-3 col-sm-6 footer-widget">
                     <h4 class="widget-title">Core Solutions</h4>
                     <ul class="footer-links">
-                        <li><a href="service.html"><i class="ion-ios-arrow-right"></i> AI & Machine Learning</a></li>
+                        <li><a href="ai-integrated-platforms.html"><i class="ion-ios-arrow-right"></i> AI & Machine Learning</a></li>
                         <li><a href="service.html"><i class="ion-ios-arrow-right"></i> Custom .NET Software</a></li>
-                        <li><a href="service.html"><i class="ion-ios-arrow-right"></i> POS & Inventory Systems</a></li>
-                        <li><a href="service.html"><i class="ion-ios-arrow-right"></i> School Management Portals</a>
+                        <li><a href="retail-pos.html"><i class="ion-ios-arrow-right"></i> POS & Inventory Systems</a></li>
+                        <li><a href="school-management-detail.html"><i class="ion-ios-arrow-right"></i> School Management Portals</a>
                         </li>
-                        <li><a href="service.html"><i class="ion-ios-arrow-right"></i> Dynamic E-Commerce</a></li>
+                        <li><a href="commerce-site-detail.html"><i class="ion-ios-arrow-right"></i> Dynamic E-Commerce</a></li>
                     </ul>
                 </div>
 
@@ -427,11 +232,11 @@
                         </li>
                         <li>
                             <i class="ion-ios-telephone"></i>
-                            <span>+1 443 866 5893</span>
+                            <span><a href="tel:+14438665893" style="color:inherit">+1 443 866 5893</a></span>
                         </li>
                         <li>
                             <i class="ion-ios-email"></i>
-                            <span>contact.786solution@gmail.com</span>
+                            <span><a href="mailto:contact.786solution@gmail.com" style="color:inherit">contact.786solution@gmail.com</a></span>
                         </li>
                         <li>
                             <i class="ion-ios-clock"></i>
@@ -447,18 +252,12 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-12 col-sm-12">
                         <p class="copyright-text">
                             &copy;
                             <script>document.write(new Date().getFullYear())</script>
                             <a href="index.html">786 Solution</a>. All Rights Reserved.
                         </p>
-                    </div>
-                    <div class="col-md-6 col-sm-6 text-right">
-                        <ul class="footer-bottom-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
