@@ -69,3 +69,44 @@
 .testimonials-redesign .stories-hero-grid>.stories-method{flex:1 1 42%;min-width:0;float:none!important;margin:0!important}
 .testimonials-redesign .stories-intro h1{margin-top:0!important}
 @media(max-width:767px){.testimonials-redesign .stories-hero{padding:55px 0 65px!important}.testimonials-redesign .stories-hero-grid{flex-direction:column!important;align-items:stretch!important;gap:30px!important}.testimonials-redesign .stories-hero-grid>.stories-intro,.testimonials-redesign .stories-hero-grid>.stories-method{flex:1 1 auto;width:100%}}
+
+/* New testimonials hero: lighter, centered and deliberately separate from old two-column layouts. */
+.testimonials-redesign .stories-hero.stories-hero-v2{
+  margin-top:76px!important;
+  padding:70px 0 67px!important;
+  background:radial-gradient(circle at 15% 12%,rgba(39,186,195,.14),transparent 35%),linear-gradient(135deg,#f8fcff 0%,#eef7fb 58%,#e3f5f5 100%)!important;
+  color:#18344d!important;
+  border-bottom:1px solid #dbeaf0;
+  min-height:0!important;
+}
+.testimonials-redesign .stories-v2-inner::before,
+.testimonials-redesign .stories-v2-inner::after {display:none!important;content:none!important}
+.testimonials-redesign .stories-v2-inner{display:block!important;text-align:center;}
+.testimonials-redesign .stories-v2-introduction{max-width:760px;margin:0 auto 44px;}
+.testimonials-redesign .stories-v2-label{display:inline-flex;align-items:center;gap:10px;color:#087c8b;letter-spacing:.14em;font-size:11px;font-weight:800;}
+.testimonials-redesign .stories-v2-dot{background:#0aaeb7;width:8px;height:8px;border-radius:50%;box-shadow:0 0 0 5px rgba(10,174,183,.13);}
+.testimonials-redesign .stories-v2-introduction h1{margin:17px 0 15px!important;line-height:1.14;font-size:clamp(33px,4.3vw,55px);font-weight:800;letter-spacing:-.035em;color:#102c46!important;text-transform:none;}
+.testimonials-redesign .stories-v2-introduction h1 span{color:#078d9c;}
+.testimonials-redesign .stories-v2-introduction p{font-size:16px;line-height:1.8;color:#536b7c;max-width:670px;margin:0 auto 25px;}
+.testimonials-redesign .stories-v2-buttons{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:13px;}
+.testimonials-redesign .stories-v2-buttons .stories-button{min-height:48px;}
+.testimonials-redesign .stories-v2-buttons .stories-button.primary{background:#0a93a1;color:#fff;}
+.testimonials-redesign .stories-v2-buttons .stories-button.primary:hover{background:#006e7f;color:#fff;}
+.testimonials-redesign .stories-v2-buttons .stories-button.secondary{color:#163b54;border:1px solid #b8d0dc;background:#fff;}
+.testimonials-redesign .stories-v2-buttons .stories-button.secondary:hover{background:#edf8f9;color:#153a50;}
+.testimonials-redesign .stories-v2-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:left;}
+.testimonials-redesign .stories-v2-step{background:#fff;border:1px solid #deeaef;border-radius:17px;padding:26px 27px 27px;box-shadow:0 11px 28px rgba(22,60,80,.055);min-width:0;}
+.testimonials-redesign .stories-v2-step-icon{display:inline-flex;align-items:center;justify-content:center;width:43px;height:43px;background:#e4f7f7;color:#087f8a;font-size:23px;border-radius:12px;margin-bottom:18px;}
+.testimonials-redesign .stories-v2-step-number{display:block;color:#048694;font-size:10px;letter-spacing:.15em;font-weight:800;}
+.testimonials-redesign .stories-v2-step h2{margin:9px 0 9px;font-size:19px;color:#16344d;font-weight:790;line-height:1.32;text-transform:none;}
+.testimonials-redesign .stories-v2-step p{font-size:13px;line-height:1.75;color:#617688;margin:0;}
+@media(max-width:991px){.testimonials-redesign .stories-v2-process{gap:12px}.testimonials-redesign .stories-v2-step{padding:22px 19px}}
+@media(max-width:767px){
+  .testimonials-redesign .stories-hero.stories-hero-v2{margin-top:72px!important;padding:52px 0 50px!important;}
+  .testimonials-redesign .stories-v2-introduction{margin-bottom:31px;}
+  .testimonials-redesign .stories-v2-introduction p{font-size:15px;}
+  .testimonials-redesign .stories-v2-process{grid-template-columns:1fr;gap:12px;}
+  .testimonials-redesign .stories-v2-step{padding:19px 22px;}
+  .testimonials-redesign .stories-v2-step-icon{margin-bottom:9px;}
+}
+@media(max-width:430px){.testimonials-redesign .stories-v2-buttons{flex-direction:column;align-items:stretch}.testimonials-redesign .stories-v2-buttons .stories-button{width:100%}}
