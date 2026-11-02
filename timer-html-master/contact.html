@@ -38,6 +38,7 @@
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/site-header.css">
+    <style>.contact-honeypot{position:absolute!important;left:-10000px!important;height:1px;overflow:hidden}.contact-status{padding:14px 18px;margin:12px 0;border-radius:8px;background:#fff4dc;color:#654511}.contact-status.is-success{background:#e0f6ea;color:#175e3b}.contact-status.is-error{background:#ffeded;color:#912f36}.contact-status a{font-weight:700;text-decoration:underline}</style>
 </head>
 
 <body>
@@ -93,35 +94,41 @@
                             for a personalized demo. Our technical team will reach out shortly to confirm your schedule.
                         </p>
                         <div class="contact-form">
-                            <form id="contact-form" method="#" action="#" role="form">
+                            <form id="contact-form" method="post" action="#" role="form" data-api-url="">
 
                                 <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
                                     <input type="text" placeholder="Your Name" class="form-control" name="name"
-                                        id="name">
+                                        id="name" required minlength="2" maxlength="100" autocomplete="name">
                                 </div>
 
                                 <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                    <input type="number" placeholder="Your Phone Number" class="form-control"
-                                        name="phone" id="phone">
+                                    <input type="tel" placeholder="Your Phone Number" class="form-control"
+                                        name="phone" id="phone" maxlength="40" autocomplete="tel">
                                 </div>
 
                                 <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
                                     <input type="email" placeholder="Your Email" class="form-control" name="email"
-                                        id="email">
+                                        id="email" required autocomplete="email">
                                 </div>
 
                                 <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
                                     <input type="text" placeholder="Subject" class="form-control" name="subject"
-                                        id="subject">
+                                        id="subject" maxlength="160">
                                 </div>
 
                                 <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
                                     <textarea rows="6" placeholder="Message" class="form-control" name="message"
-                                        id="message"></textarea>
+                                        id="message" required minlength="10" maxlength="5000"></textarea>
                                 </div>
 
+                                <div class="form-group contact-honeypot" aria-hidden="true"><label for="contact-website">Website (leave blank)</label><input type="text" name="website" id="contact-website" autocomplete="off" tabindex="-1"></div>
+
+
+                                <div id="contact-status" role="status" aria-live="polite" class="contact-status" hidden></div>
+
+
                                 <div id="success" class="success">
-                                    Thank you! Your message has been sent successfully.
+                                    Thank you. Your email has been sent successfully.
                                 </div>
 
                                 <div id="error" class="error">

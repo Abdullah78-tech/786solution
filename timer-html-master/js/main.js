@@ -38,51 +38,67 @@
         });
     };
 
-    /* ========================================================================= */
-    /*   Contact Form Validating
-    /* ========================================================================= */
-
-    $('#contact-form').validate({
-        rules: {
-            name: {
-                required: true, minlength: 4
+    /* Contact form submits to configured API only; no fake success before deployment. */
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const status = document.getElementById("contact-status");
+            const submit = document.getElementById("contact-submit");
+            const directMail = "mailto:contact.786solution@gmail.com";
+            const endpoint = (form.getAttribute("data-api-url") || "").trim();
+            const safeMessage = function(message, error) {
+                status.hidden = false;
+                status.className = "contact-status " + (error ? "is-error" : "is-success");
+                status.textContent = message;
+            };
+            if (!form.reportValidity()) return;
+            if (!endpoint || !/^https:\/\/[^\/\s]+\/[^?\s]+$/i.test(endpoint)) {
+                status.hidden = false;
+                status.className = "contact-status";
+                status.textContent = "Online submission is not configured yet. Please contact us directly: ";
+                const link = document.createElement("a");
+                link.href = directMail;
+                link.textContent = "Email 786 Solution";
+                status.appendChild(link);
+                return;
             }
-            , email: {
-                required: true, email: true
-            }
-            , subject: {
-                required: false,
-            }
-            , message: {
-                required: true,
-            }
-            ,
-        }
-        , messages: {
-            user_name: {
-                required: "Come on, you have a name don't you?", minlength: "Your name must consist of at least 2 characters"
-            }
-            , email: {
-                required: "Please put your email address",
-            }
-            , message: {
-                required: "Put some messages here?", minlength: "Your name must consist of at least 2 characters"
-            }
-            ,
-        }
-        , submitHandler: function(form) {
-            $(form).ajaxSubmit( {
-                type:"POST", data: $(form).serialize(), url:"sendmail.php", success: function() {
-                    $('#contact-form #success').fadeIn();
+            const data = {
+                name: form.elements.name.value.trim(),
+                email: form.elements.email.value.trim(),
+                phone: form.elements.phone.value.trim(),
+                subject: form.elements.subject.value.trim(),
+                message: form.elements.message.value.trim(),
+                website: form.elements.website.value.trim()
+            };
+            submit.disabled = true;
+            safeMessage("Sending your message...", false);
+            try {
+                const timeout = new AbortController();
+                const timer = setTimeout(function(){ timeout.abort(); }, 20000);
+                let response;
+                try {
+                    response = await fetch(endpoint, {
+                        method: "POST",
+                        mode: "cors",
+                        credentials: "omit",
+                        headers: {"Content-Type": "application/json"},
+                        body: JSON.stringify(data),
+                        signal: timeout.signal
+                    });
+                } finally { clearTimeout(timer); }
+                const body = await response.json().catch(function(){ return {}; });
+                if (response.ok && body.ok === true) {
+                    safeMessage("Your message was sent successfully. Thank you!", false);
+                    form.reset();
+                } else {
+                    safeMessage("Message could not be sent. Please email contact.786solution@gmail.com directly.", true);
                 }
-                , error: function() {
-                    $('#contact-form #error').fadeIn();
-                }
-            }
-            );
-        }
-    });
-
+            } catch (error) {
+                safeMessage("Could not reach our contact service. Please email contact.786solution@gmail.com directly.", true);
+            } finally { submit.disabled = false; }
+        });
+    }
 
 }(jQuery));
 
