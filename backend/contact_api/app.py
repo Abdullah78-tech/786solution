@@ -1,4 +1,4 @@
-"""786 Solution contact-only FastAPI service. Set SMTP configuration in cPanel."""
+"""786 Solution contact-only FastAPI service."""
 import logging
 import os
 import smtplib
@@ -15,7 +15,7 @@ from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 log = logging.getLogger("contact-api")
 app = FastAPI(title="786 Solution Contact API", docs_url=None, redoc_url=None, openapi_url=None)
-origins = [s.strip().rstrip("/") for s in os.getenv("CONTACT_ALLOWED_ORIGINS", "").split(",") if s.strip()]
+origins = [s.strip().rstrip("/") for s in os.getenv("CONTACT_ALLOWED_ORIGINS", "https://786solution.com,https://www.786solution.com").split(",") if s.strip()]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 
 _lock = Lock()
